@@ -2,8 +2,8 @@ function copyCal() {
   var now = new Date();
   var start = new Date(now.getTime() - (604800*1000*52)); 
   var end = new Date(now.getTime() + (604800*1000*52));
-  var srcCal = CalendarApp.getCalendarById("nfbictvqchdno8qkmruqlgnkl8p0gh6v@import.calendar.google.com");
-  var destCal = CalendarApp.getCalendarById("s3hgvlthgigoffisp6ojn7gn4s@group.calendar.google.com");
+  var srcCal = CalendarApp.getCalendarById("srcCal");
+  var destCal = CalendarApp.getCalendarById("destCal");
   var events = srcCal.getEvents(start, end);
   var oldEvents = destCal.getEvents(start, end);
  
@@ -34,7 +34,7 @@ function changeColor(){
   var now = new Date();
   var start = new Date(now.getTime() - (604800*1000*52)); 
   var end = new Date(now.getTime() + (604800*1000*52));
-  var destCal = CalendarApp.getCalendarById("s3hgvlthgigoffisp6ojn7gn4s@group.calendar.google.com");
+  var destCal = CalendarApp.getCalendarById("destCal");
   var destEvents = destCal.getEvents(start, end); 
   
   for(var i in destEvents){
